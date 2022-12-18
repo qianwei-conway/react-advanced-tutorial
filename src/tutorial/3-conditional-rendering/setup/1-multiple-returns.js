@@ -25,7 +25,7 @@ const MultipleReturns = () => {
 				setIsLoading(false);
 			})
 			.catch((error) => console.log(error)); // only catches network error
-	}, []);
+	}, []); // if not add the [], the fetch will execute many many times.
 
 	if (isLoading) {
 		return (
